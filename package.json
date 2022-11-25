@@ -1,21 +1,21 @@
 {
-  "name": "index-999",
+  "name": "beauty-hair",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Myrhoiazov.github.io/go-it-project-html-css",
+  "homepage": "https://Myrhoiazov.github.io/beauty-hair",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /go-it-project-html-css/"
+    "build": "parcel build src/*.html --public-url /beauty-hair/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Myrhoiazov/go-it-project-html-css"
+    "url": "git+https://github.com/Myrhoiazov/beauty-hair"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Denys Myrhoiazov <denis.mirgoyazov@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Myrhoiazov/go-it-project-html-css/issues"
+    "url": "https://github.com/Myrhoiazov/beauty-hair/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
