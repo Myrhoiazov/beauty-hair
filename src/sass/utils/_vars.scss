@@ -1,10 +1,13 @@
 // Основной цвет шрифта, кнопок, логотипа
-$brand-color: #d41443;
-$brand-accent: #ffa5ba;
+// $brand-color: #d41443;
+$brand-color: #22534e;
+$brand-accent: #437e79;
 $alternate-accent-color: #d41342;
 
+// rgb(36 30 32)
 // Основной цвет бекграунда
-$bg-color: #ffb8ca;
+$bg-color: rgb(36 30 32);
+$bg-color-black: #000000;
 $bg-light: #fff5f6;
 $bg-cafe: #f0d1a5;
 $bg-green: #c2e297;
@@ -21,7 +24,7 @@ $subtext-color: #907e82;
 $white: #fff;
 
 // Font
-$main-font: 'DM Sans', sans-serif;
+$main-font: Arial, Helvetica, sans-serif;
 $brand-font: 'Titan One', sans-serif;
 
 // Transition
