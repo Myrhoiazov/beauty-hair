@@ -6,7 +6,7 @@
   overflow: hidden;
 
   @include breakpointTo(tablet) {
-    background-image: url('../images/hero-header/icecream1x-header-mobile.png');
+    background-image: url('../images/hero-header/girl.png');
     background-repeat: no-repeat;
     background-size: 300px;
     background-position: right bottom;
@@ -14,7 +14,7 @@
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url('../images/hero-header/icecream2x-header-mobile.png');
+      background-image: url('../images/hero-header/girl.png');
       background-repeat: no-repeat;
       background-size: 300px;
       background-position: right bottom;
@@ -22,13 +22,109 @@
   }
 }
 
+// Header Address
+
+.icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.address {
+  display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+    font-style: normal;
+    padding: 10px 0;
+    background-color: $bg-color;
+  }
+}
+
+.header-address {
+  display: flex;
+  align-items: center;
+}
+
+.address__items {
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+  }
+
+  .address__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  .address__link {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: $white;
+
+    transition: $transition-style;
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  .address__icon {
+    margin-right: 10px;
+  }
+}
+
+.address-social {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  .address-social__item {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: $white;
+  }
+
+  .address-social__item:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  .address-social__links {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: white;
+  }
+}
+
+// -------------
+
 .header__inner {
   margin-left: auto;
   margin-right: auto;
 
   @include breakpointFrom(tablet) {
-    background-image: url('../images/hero-header/girl1x-tablet.png'),
-      url('../images/hero-header/icecream1x-header-tablet.png');
+    background-image: url('../images/hero-header/girl.png'),
+      url('../images/hero-header/girl.png');
     background-repeat: no-repeat;
     background-size: 190px, 370px;
     background-position: right bottom, left 65% bottom;
@@ -36,8 +132,8 @@
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url('../images/hero-header/girl2x-tablet.png'),
-        url('../images/hero-header/icecream2x-header-tablet.png');
+      background-image: url('../images/hero-header/girl.png'),
+        url('../images/hero-header/girl.png');
       background-repeat: no-repeat;
       background-size: 190px, 370px;
       background-position: right bottom, left 65% bottom;
@@ -47,8 +143,8 @@
   @media screen and (min-width: 1280px) {
     overflow: hidden;
 
-    background-image: url('../images/hero-header/girl1x-descktop.png'),
-      url('../images/hero-header/icecream1x-header-descktop.png');
+    background-image: url('../images/hero-header/girl.png'),
+      url('../images/hero-header/girl.png');
     background-repeat: no-repeat;
     background-size: 304px, 534px;
     background-position: right bottom, right 38% bottom;
@@ -57,26 +153,36 @@
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url('../images/hero-header/girl2x-descktop.png'),
-        url('../images/hero-header/icecream2x-header-descktop.png');
+        url('../images/hero-header/girl.png');
       background-repeat: no-repeat;
-      background-size: 304px, 534px;
+      background-size: 304px, 634px;
       background-position: right bottom, right 38% bottom;
     }
   }
 }
 
+.nav-wrapper{
+  background-color: wheat;
+}
+
 .header__nav {
   padding-top: 8px;
+  padding-bottom: 8px;
+
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
 
   @media screen and (min-width: 768px) {
-    padding-top: 20px;
+    // padding-top: 20px;
     display: flex;
     align-items: center;
   }
 
   @media screen and (min-width: 1280px) {
     justify-content: space-between;
-    padding-top: 37px;
+    // background-color: rgba(105, 105, 105, 0.2);
   }
 }
 
@@ -127,6 +233,10 @@
       }
     }
   }
+}
+
+.header__logo {
+  // padding-left: 50px;
 }
 
 .nav__items {
@@ -352,6 +462,8 @@
   }
 }
 
+// Header Title
+
 .header__items {
   margin-bottom: 20px;
 
@@ -367,7 +479,6 @@
 }
 
 .header__title {
-  font-family: 'Titan One';
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
@@ -380,13 +491,12 @@
 
   @media screen and (max-width: 1279px) {
     font-size: 22px;
-
-    max-width: 162px;
+    max-width: 462px;
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 38px;
-    max-width: 277px;
+    max-width: 677px;
     margin-bottom: 24px;
   }
 

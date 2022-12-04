@@ -1,6 +1,34 @@
 <header class="header">
-  <div class="container">
-    <div class="header__inner">
+  <!-- Address links -->
+  <address class="address">
+    <div class="container">
+      <div class="header-address">
+        <ul class="address-social">
+          <li class="address-social__item">Social links:</li>
+          <li class="address-social__item">
+            <a href="" class="address-social__links"
+              ><img
+                class="icon"
+                src="./images/icon/tik-tok.svg"
+                alt="icon tik-tok"
+                aria-label="tik-tok"
+            /></a>
+          </li>
+          <li class="address-social__item">
+            <a href="" class="address-social__links"
+              ><img
+                class="icon"
+                src="./images/icon/instagram.svg"
+                alt="icon instagram"
+                aria-label="instagram"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </address>
+  <div class="nav-wrapper">
+    <div class="container">
       <div class="header__nav">
         <!-- <a href="#home" class="logo header__logo">
           <picture>
@@ -28,7 +56,7 @@
             src="./images/logo-beuty/logo.png"
             alt="Логотип"
             class="logo__img"
-            width="129"
+            width="100"
             aria-label="Логотип"
         /></a>
         <nav class="nav" data-menu id="menu-container">
@@ -69,22 +97,43 @@
         >
           <span class="button__line"></span>
         </button>
-        <button
-          class="button button--bold"
-          data-btn-open="buynow"
-          aria-label="Buy now"
-        >
-          Buy now
-          <svg class="button__icon" width="10">
-            <use href="./images/icons.svg#icon-bracket"></use>
-          </svg>
-        </button>
+        <ul class="address__items">
+          <li class="address__item">
+            <a class="address__link" href="mailto:info@devstudio.com">
+              <img
+                class="icon address__icon"
+                src="./images/icon/post.svg"
+                alt="icon post"
+                aria-label="post"
+              />
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="address__item">
+            <a class="address__link" href="tel:+3800730011110">
+              <img
+                class="icon address__icon"
+                src="./images/icon/phone.svg"
+                alt=" icon phone"
+                aria-label="phone"
+              />
+              +380 073 001 11 10</a
+            >
+          </li>
+        </ul>
       </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header__inner">
+      <!-- Navigation -->
+
+      <!-- Header body -->
       <div class="header__body">
         <ul class="header__items">
           <li class="header__item">
             <h1 class="header__title">
-              ice cream made with
+              твоє волосся потребує у правильному догляді. <br />
               <span class="header__title--accent">passion</span>
             </h1>
             <a
