@@ -2,6 +2,7 @@
 
 .header {
   background-color: $bg-color;
+  background-image: linear-gradient(180deg, #c8a180 0%, #d9b79a 100%);
 
   position: relative;
   overflow: hidden;
@@ -136,10 +137,11 @@
   margin-right: auto;
 
   @include breakpointFrom(tablet) {
-    background-image: url('../images/hero-header/girl+.png');
+    background-image: url('../images/hero-header/girl+.png'),
+      url('../images/beauty-png/light.png');
     background-repeat: no-repeat;
-    background-size: 420px;
-    background-position: left 95% bottom -250px;
+    background-size: 420px, 400px;
+    background-position: left 95% bottom -250px, right center;
   }
 
   @media screen and (min-width: 1280px) {
@@ -291,7 +293,7 @@
 
   @media screen and (max-width: 767px) {
     position: absolute;
-    top: 20px;
+    top: 35px;
     right: 20px;
 
     width: 30px;
