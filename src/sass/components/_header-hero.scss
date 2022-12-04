@@ -1,17 +1,16 @@
 // Header
 
 .header {
-  // background-image: linear-gradient(to bottom, #c8a180 0%, #d9b79a 50%);
   background-color: $bg-color;
 
   position: relative;
   overflow: hidden;
 
   @include breakpointTo(tablet) {
-    background-image: url('../images/hero-header/girl.png');
+    background-image: url('../images/hero-header/girl+.png');
     background-repeat: no-repeat;
     background-size: 560px;
-    background-position: right bottom;
+    background-position: right -100px bottom -200px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -137,19 +136,19 @@
   margin-right: auto;
 
   @include breakpointFrom(tablet) {
-    background-image: url('../images/hero-header/girl.png');
+    background-image: url('../images/hero-header/girl+.png');
     background-repeat: no-repeat;
-    background-size: 490px;
-    background-position: left 95% bottom;
+    background-size: 420px;
+    background-position: left 95% bottom -250px;
   }
 
   @media screen and (min-width: 1280px) {
     overflow: hidden;
 
-    background-image: url('../images/hero-header/girl.png');
+    background-image: url('../images/hero-header/girl+.png');
     background-repeat: no-repeat;
-    background-size: 634px;
-    background-position: right 8% bottom;
+    background-size: 734px;
+    background-position: right 8% bottom -350px;
   }
 }
 
