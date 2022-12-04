@@ -1,7 +1,9 @@
 // Header
 
 .header {
+  // background-image: linear-gradient(to bottom, #c8a180 0%, #d9b79a 50%);
   background-color: $bg-color;
+
   position: relative;
   overflow: hidden;
 
@@ -15,10 +17,12 @@
   @media screen and (min-width: 1280px) {
     overflow: hidden;
 
-    background-image: url('../images/beauty-png/hair.png');
+    background-image: url('../images/beauty-png/hair.png'),
+      url('../images/beauty-png/light.png'),
+      linear-gradient(180deg, #c8a180 0%, #d9b79a 50%);
     background-repeat: no-repeat;
-    background-size: 114px;
-    background-position: left bottom;
+    background-size: 120px 220px, 800px, 100%;
+    background-position: left bottom 40px, right, center;
   }
 }
 
@@ -147,7 +151,6 @@
     background-size: 634px;
     background-position: right 8% bottom;
   }
-
 }
 
 .nav-wrapper {
@@ -435,7 +438,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    padding-top: 60px;
+    padding-top: 100px;
     padding-bottom: 60px;
   }
 }
@@ -458,7 +461,7 @@
 
 .header__title {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.04em;
@@ -476,6 +479,10 @@
     font-size: 38px;
     max-width: 677px;
     margin-bottom: 24px;
+
+    &--accent {
+      max-width: 462px;
+    }
   }
 
   &--accent {
@@ -483,6 +490,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
+    letter-spacing: 0;
 
     padding-top: 10px;
 
@@ -607,7 +615,7 @@
   display: flex;
   align-items: center;
 
-  margin-left: 100px;
+  margin-left: 60px;
 
   @media screen and (max-width: 767px) {
     display: none;
