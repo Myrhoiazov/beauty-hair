@@ -67,6 +67,19 @@ ol {
   }
 }
 
+.title {
+  font-family: $main-font;
+  // font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  color: $bg-color;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
