@@ -3,6 +3,28 @@
   padding-bottom: 40px;
 }
 
+.products__title {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $brand-color;
+  margin-bottom: 10px;
+
+  @include breakpointFrom(tablet) {
+    font-size: 48px;
+    // margin-bottom: 154px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 58px;
+    // margin-bottom: 158px;
+  }
+}
+
 .products__label {
   font-family: $brand-font;
   font-size: 18px;
@@ -13,33 +35,13 @@
   margin-bottom: 15px;
 
   @include breakpointFrom(tablet) {
+    margin-bottom: 84px;
     font-size: 26px;
   }
 
   @include breakpointFrom(desktop) {
-    font-size: 30px;
-  }
-}
-
-.products__title {
-  font-family: $brand-font;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $brand-color;
-  margin-bottom: 148px;
-
-  @include breakpointFrom(tablet) {
-    font-size: 48px;
-    margin-bottom: 154px;
-  }
-
-  @include breakpointFrom(desktop) {
-    font-size: 58px;
-    margin-bottom: 258px;
+    margin-bottom: 100px;
+    font-size: 20px;
   }
 }
 
@@ -48,206 +50,97 @@
 
   @include breakpointFrom(tablet) {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 
 .products-item {
-  background: $bg-color;
+  display: flex;
+  flex-direction: column;
+
+  background: $brand-color;
   border-radius: 24px;
-  padding: 160px 40px 0;
-  height: 490px;
+  padding: 40px 20px;
+  width: 320px;
+  height: 290px;
+  cursor: pointer;
 
-  &--bg-coffee {
-    background-color: $bg-cafe;
-  }
+  margin-bottom: 10px;
 
-  &--bg-milk {
-    background-color: $bg-green;
-  }
-
-  &:not(:last-child) {
-    @include breakpointTo(tablet) {
-      margin-bottom: 140px;
-    }
+  &:hover {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(34, 83, 78, 0.6) 10%,
+        rgba(34, 83, 78, 0.8) 100%
+      ),
+      url('../images/beauty-png/about-us.png');
+    background-repeat: no-repeat;
+    background-size: 100%, 500px;
+    background-position: center, left -90px bottom -30px;
   }
 
   @include breakpointFrom(tablet) {
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
+    width: calc((100% - 20px) / 2);
 
-    & {
-      padding: 115px 33px 0;
-      height: 450px;
-    }
+    margin: 0;
   }
 
   @include breakpointFrom(desktop) {
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-
-    & {
-      padding: 165px 75px 60px;
-      height: 535px;
-    }
-
+    width: calc((100% - 60px) / 4);
   }
-
-
 }
 
 .products-item__title {
   position: relative;
-  font-family: $brand-font;
+  font-family: $main-font;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $white;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 
-  @include breakpointFrom (desktop) {
-    font-size: 30px;
+  @include breakpointFrom(tablet) {
+    font-size: 24px;
   }
 
-  &::before {
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 20px;
-    width: 280px;
-    height: 280px;
-    content: "";
-    display: inline-block;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    @include breakpointFrom(tablet) {
-      width: 224px;
-      height: 224px;
-    }
-
-    @include breakpointFrom(desktop) {
-      width: 394px;
-      height: 394px;
-    }
+  @include breakpointFrom(desktop) {
+    font-size: 20px;
   }
-
-  &--ice::before {
-    background-image: url(../images/products/icecream1x-mobile.png);
-
-    @include breakpointDPR(2) {
-      background-image: url(../images/products/icecream2x-mobile.png);
-    }
-
-    @include breakpointFrom(tablet) {
-      background-image: url(../images/products/icecream1x-tablet.png);
-
-      @include breakpointDPR(2) {
-        background-image: url(../images/products/icecream2x-tablet.png);
-      }
-    }
-
-    @include breakpointFrom(desktop) {
-      background-image: url(../images/products/icecream1x-descktop.png);
-
-      @include breakpointDPR(2) {
-        background-image: url(../images/products/icecream2x-descktop.png);
-      }
-    }
-
-  }
-
-  &--coffee::before {
-    background-image: url(../images/products/icecoffee1x-mobile.png);
-
-    @include breakpointDPR(2) {
-      background-image: url(../images/products/icecoffee2x-mobile.png);
-    }
-
-    @include breakpointFrom(tablet) {
-      background-image: url(../images/products/icecoffee1x-tablet.png);
-
-      @include breakpointDPR(2) {
-        background-image: url(../images/products/icecoffee2x-tablet.png);
-      }
-    }
-
-    @include breakpointFrom(desktop) {
-      background-image: url(../images/products/icecoffee1x-descktop.png);
-
-      @include breakpointDPR(2) {
-        background-image: url(../images/products/icecoffee2x-descktop.png);
-      }
-    }
-  }
-
-  &--milk::before {
-    background-image: url(../images/products/milkshake1x-mobile.png);
-
-    @include breakpointDPR(2) {
-      background-image: url(../images/products/milkshake2x-mobile.png);
-    }
-
-    @include breakpointFrom(tablet) {
-      background-image: url(../images/products/milkshake1x-tablet.png);
-
-      @include breakpointDPR(2) {
-        background-image: url(../images/products/milkshake2x-tablet.png);
-      }
-    }
-
-    @include breakpointFrom(desktop) {
-      background-image: url(../images/products/milkshake1x-descktop.png);
-
-      @include breakpointDPR(2) {
-        background-image: url(../images/products/milkshake2x-descktop.png);
-      }
-    }
-  }
-
-  &::after {
-    position: absolute;
-    top: 55px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background-color: $white;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    filter: drop-shadow(10px 0px 0px $white) drop-shadow(-10px 0px 0px $white);
-
-    @include breakpointFrom(desktop) {
-      top: 65px;
-    }
-  }
-
-
 }
 
 .products-item__text {
-  font-weight: 700;
-  font-size: 14px;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 12px;
   line-height: 1.52;
   text-align: center;
   letter-spacing: 0.04em;
   color: $white;
-  margin-bottom: 32px;
+  margin-bottom: 22px;
+
+  flex-grow: 1;
 
   @include breakpointFrom(desktop) {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
-
 }
+
+
 
 .products__icon {
   width: 17px;
   height: 15px;
   fill: $brand-color;
+  margin-left: 5px;
+
+  transition: transform 0.5s linear;
+
+}
+
+.button__products:hover .products__icon{
+  transform: translateX(10px);
 }

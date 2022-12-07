@@ -74,7 +74,7 @@
   // margin-bottom: 32px;
 
   @include breakpointFrom(tablet) {
-    font-size: 48px;
+    font-size: 32px;
     margin-bottom: 40px;
   }
 
@@ -89,7 +89,7 @@
   width: 220px;
 
   @include breakpointFrom(tablet) {
-    margin-left: 32px;
+    // margin-left: 32px;
     margin-top: 0;
     width: 335px;
   }
@@ -105,14 +105,14 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
-  color: $text-color;
+  color: $brand-color;
 
   &:not(:last-of-type) {
     margin-bottom: 20px;
   }
 
   &--sub {
-    color: $subtext-color;
+    color: $brand-accent;
   }
 
   @include breakpointFrom(tablet) {
@@ -165,8 +165,9 @@
   @include breakpointFrom(tablet) {
     display: block;
 
-    width: 300px;
+    width: 350px;
     height: 350px;
+    margin-left: auto;
   }
 
   @include breakpointFrom(desktop) {
