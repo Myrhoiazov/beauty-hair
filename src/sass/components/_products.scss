@@ -6,22 +6,19 @@
 .products__title {
   font-family: $main-font;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 36px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $brand-color;
-  margin-bottom: 10px;
 
   @include breakpointFrom(tablet) {
     font-size: 48px;
-    // margin-bottom: 154px;
   }
 
   @include breakpointFrom(desktop) {
     font-size: 58px;
-    // margin-bottom: 158px;
   }
 }
 
@@ -32,7 +29,7 @@
   text-align: center;
   text-transform: uppercase;
   color: $brand-accent;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 
   @include breakpointFrom(tablet) {
     margin-bottom: 84px;
@@ -56,17 +53,21 @@
 }
 
 .products-item {
+  position: relative;
   display: flex;
   flex-direction: column;
 
-  background: $brand-color;
+  background-color: $brand-color;
+
   border-radius: 24px;
   padding: 40px 20px;
-  width: 320px;
+  width: 290px;
   height: 290px;
   cursor: pointer;
 
   margin-bottom: 10px;
+
+  transition: box-shadow $transition-style;
 
   &:hover {
     background-image: linear-gradient(
@@ -78,6 +79,7 @@
     background-repeat: no-repeat;
     background-size: 100%, 500px;
     background-position: center, left -90px bottom -30px;
+    box-shadow: $img-shadow-accent;
   }
 
   @include breakpointFrom(tablet) {
@@ -129,8 +131,6 @@
   }
 }
 
-
-
 .products__icon {
   width: 17px;
   height: 15px;
@@ -138,9 +138,8 @@
   margin-left: 5px;
 
   transition: transform 0.5s linear;
-
 }
 
-.button__products:hover .products__icon{
+.button__products:hover .products__icon {
   transform: translateX(10px);
 }
