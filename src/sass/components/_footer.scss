@@ -1,76 +1,19 @@
 .footer {
   font-style: normal;
-  background-color: $brand-color;
+  background-color: rgba(34, 83, 78, 0.9);
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba(34, 83, 78, 0.1),
+      rgba(34, 83, 78, 0.1)
+    ),
+    url('../images/beauty-png/Mask footer.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   &__container {
     padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-.handmade {
-  max-width: 234px;
-  &__upper-text {
-    font-family: $brand-font;
-    font-size: 18px;
-    line-height: 1.17;
-    text-transform: uppercase;
-    color: $brand-accent;
-    margin-bottom: 16px;
-  }
-  &__under-text {
-    font-family: $brand-font;
-    font-size: 34px;
-    line-height: 39px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $brand-color;
-    animation: changeFooterColor 4000ms infinite alternate;
-  }
-  &__under-icon {
-    fill: $brand-color;
-    transform: rotate(45deg);
-  }
-}
-
-@keyframes changeFooterColor {
-  0% {
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(1);
-  }
-  90% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-.socials {
-  &__list {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  &__icon {
-    width: 60%;
-    height: 60%;
-    fill: $white;
-  }
-  &__text {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.86;
-    text-align: right;
-    color: $text-color;
-  }
-  &__tel {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.86;
-    color: $brand-color;
   }
 }
 
@@ -192,7 +135,7 @@
     .contact__link {
       color: white;
 
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 }
@@ -229,7 +172,7 @@
 }
 
 .footer-social .address-social__item {
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   color: white;
 
@@ -238,6 +181,10 @@
 
     .icon {
       fill: white;
+
+      &:hover {
+        fill: $bg-color-black;
+      }
     }
   }
 }
