@@ -71,12 +71,21 @@ ol {
   font-family: $main-font;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.4;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 
   color: $bg-color;
+}
+
+.text {
+  font-family: $brand-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $brand-accent;
 }
 
 .visually-hidden {
