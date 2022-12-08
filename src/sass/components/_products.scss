@@ -1,6 +1,14 @@
 .products {
   padding-top: 80px;
   padding-bottom: 40px;
+
+  @include breakpointFrom(tablet) {
+    background-image: url('../images/beauty-png/lines.png');
+    // linear-gradient(to bottom, rgba(34, 83, 78, 0.2), rgba(34, 83, 78, 0.2));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130%;
+  }
 }
 .products__label-top {
   text-align: left;

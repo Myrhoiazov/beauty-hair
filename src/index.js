@@ -65,18 +65,26 @@
     document.body.classList.toggle('menu-opened');
   }
 
+  // Menu fixed + Go to top
+
+  const nav = document.querySelector('.nav-wrapper');
+
   window.onscroll = function () {
     if (
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
     ) {
       refs.btnGotoTop.classList.remove('goto-top--hide');
+      nav.classList.add('fixed');
+      nav.classList.add('animate__animated');
+      nav.classList.add('animate__fadeIn');
     } else {
       refs.btnGotoTop.classList.add('goto-top--hide');
+      nav.classList.remove('fixed');
+      nav.classList.remove('animate__animated');
+      nav.classList.remove('animate__fadeIn');
     }
   };
-
-
 })();
 
 $('.reviews__slider').slick({
@@ -88,24 +96,42 @@ $('.reviews__slider').slick({
   },
 });
 
+// Masters slider
 
 const buttonsWrapper = document.querySelector('.map');
-  const slides = document.querySelector('.inner');
+const slides = document.querySelector('.inner');
 
-  buttonsWrapper.addEventListener('click', e => {
-    if (e.target.nodeName === 'BUTTON') {
-      Array.from(buttonsWrapper.children).forEach(item =>
-        item.classList.remove('active')
-      );
-      if (e.target.classList.contains('first')) {
-        slides.style.transform = 'translateX(-0%)';
-        e.target.classList.add('active');
-      } else if (e.target.classList.contains('second')) {
-        slides.style.transform = 'translateX(-33.33333333333333%)';
-        e.target.classList.add('active');
-      } else if (e.target.classList.contains('third')) {
-        slides.style.transform = 'translateX(-66.6666666667%)';
-        e.target.classList.add('active');
-      }
+buttonsWrapper.addEventListener('click', e => {
+  if (e.target.nodeName === 'BUTTON') {
+    Array.from(buttonsWrapper.children).forEach(item =>
+      item.classList.remove('active')
+    );
+    if (e.target.classList.contains('first')) {
+      slides.style.transform = 'translateX(-0%)';
+      e.target.classList.add('active');
+    } else if (e.target.classList.contains('second')) {
+      slides.style.transform = 'translateX(-33.33333333333333%)';
+      e.target.classList.add('active');
+    } else if (e.target.classList.contains('third')) {
+      slides.style.transform = 'translateX(-66.6666666667%)';
+      e.target.classList.add('active');
     }
-  });
+  }
+});
+
+// Slick Menu
+
+// const nav = document.querySelector('.nav-wrapper');
+
+// window.onscroll = function () {
+//   if (window.scrollY > 400) {
+//     nav.classList.add('fixed');
+//     nav.classList.add('animate__animated');
+//     nav.classList.add('animate__fadeInDown');
+//   } else {
+//     nav.classList.remove('fixed');
+//     nav.classList.remove('animate__animated');
+//     nav.classList.remove('animate__fadeInDown');
+
+//   }
+// };

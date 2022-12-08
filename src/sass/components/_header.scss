@@ -57,6 +57,15 @@
 
 .nav-wrapper {
   background-color: white;
+
+  transition: all 0.4s linear;
+
+  &.fixed {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .header__nav {
