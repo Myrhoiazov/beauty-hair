@@ -1,0 +1,102 @@
+.faq__items {
+  padding: 40px 0;
+  @include breakpointFrom(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  @include breakpointFrom(desktop) {
+    // padding-left: 30px;
+    // font-size: 58px;
+  }
+}
+
+.faq__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @include breakpointFrom(tablet) {
+    width: calc((100% - 30px * 2) / 2);
+  }
+
+  @include breakpointFrom(desktop) {
+  }
+}
+
+.faq__title {
+  color: $brand-color;
+
+  @include breakpointFrom(tablet) {
+    text-align: left;
+    font-size: 48px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 58px;
+  }
+}
+
+.faq__text {
+  @include breakpointFrom(tablet) {
+    text-align: left;
+  }
+}
+
+input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: 0;
+}
+
+.faq__label {
+  background-color: $brand-color;
+  color: white;
+  padding: 1em;
+  position: relative;
+}
+label::before {
+  content: '';
+  display: inline-block;
+  border: 15px solid transparent;
+  border-left: 20px solid white;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+div.p {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+div.p p {
+  padding: 2em;
+}
+input:checked ~ .faq__label label::before {
+  border-left: 15px solid transparent;
+  border-top: 20px solid white;
+  margin-top: 12px;
+  margin-right: 10px;
+}
+
+input:checked ~ .faq__label ~ div.p {
+  max-height: 100px;
+}
+
+a {
+  color: steelblue;
+}

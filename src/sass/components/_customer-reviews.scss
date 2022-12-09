@@ -7,11 +7,11 @@
   position: relative;
 
   @include breakpointFrom(tablet) {
-    padding-bottom: 206px;
+    padding-bottom: 106px;
   }
 
   @include breakpointFrom(desktop) {
-    padding-bottom: 223px;
+    padding-bottom: 123px;
   }
 
   &__container {
