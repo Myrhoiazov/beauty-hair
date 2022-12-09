@@ -103,9 +103,6 @@
 }
 
 .hero__title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -114,7 +111,7 @@
   
 
   @media screen and (max-width: 1279px) {
-    font-size: 22px;
+    font-size: 32px;
     max-width: 462px;
   }
 
@@ -134,22 +131,16 @@
     display: inline-block;
     font-family: $main-font;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 0;
 
-    padding-top: 10px;
+    padding: 10px 0;
 
     text-transform: uppercase;
     color: $white;
 
-    @media screen and (min-width: 768px) {
-      font-size: 14px;
-    }
-
     @media screen and (min-width: 1280px) {
       max-width: 462px;
-
-      font-size: 18px;
     }
   }
 }
@@ -161,9 +152,7 @@
   font-size: 8px;
   line-height: 1.1;
 
-  height: 24px;
-
-  padding: 5px 13px;
+  height: 32px;
 
   @media screen and (min-width: 1280px) {
     font-size: 14px;

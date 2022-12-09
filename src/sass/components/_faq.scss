@@ -57,8 +57,10 @@
   }
 }
 
-details {
+details.card {
   width: 100%;
+  min-height: 55px;
+  height: 55px;
 
   padding: 0 10px;
   margin: 0 auto;
@@ -69,27 +71,20 @@ details {
   border-radius: 5px;
   overflow: hidden;
 
-  transition: all 3s ease-in;
+  transition: all 0.5s ease-in;
+
+  &[open].card {
+    min-height: 250px;
+  }
 
   @include breakpointFrom(tablet) {
     width: 100%;
-
   }
 
   @include breakpointFrom(desktop) {
     width: 75%;
-
   }
 }
-
-// details:not([open]) {
-//   height: 1.25em;
-// }
-
-// details[open]
-// {
-//     height: 2.50em;
-// }
 
 summary {
   padding: 1rem;
@@ -99,6 +94,8 @@ summary {
   padding-left: 2.2rem;
   position: relative;
   cursor: pointer;
+
+  animation: sweep 0.5s ease-in-out;
 }
 
 summary:before {
@@ -119,26 +116,27 @@ details[open] > summary:before {
   transform: rotate(90deg);
 }
 
-details[open] summary ~ * {
-  animation: sweep 0.5s ease-in-out;
-}
+// details[open] summary ~ * {
+//   animation: sweep 0.5s ease-in-out;
+// }
 
-@keyframes sweep {
-  0% {
-    opacity: 0;
-    margin-left: -10px;
-  }
-  100% {
-    opacity: 1;
-    margin-left: 0px;
-  }
-}
+// @keyframes sweep {
+//   0% {
+//     opacity: 0;
+//     margin-left: -10px;
+//   }
+//   100% {
+//     opacity: 1;
+//     margin-left: 0px;
+//   }
+// }
 
 details summary::-webkit-details-marker {
   display: none;
 }
 
 details > ul {
-  padding-bottom: 1rem;
+  padding: 1rem;
+  // padding-bottom: 1rem;
   margin-bottom: 0;
 }
