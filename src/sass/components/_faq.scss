@@ -24,16 +24,12 @@
   @include breakpointFrom(tablet) {
     width: calc((100% - 30px * 2) / 2);
   }
-
-  @include breakpointFrom(desktop) {
-  }
 }
 
 .faq__title {
   color: $brand-color;
 
   @include breakpointFrom(tablet) {
-    // text-align: left;
     font-size: 48px;
   }
 
@@ -43,19 +39,26 @@
 }
 
 .faq__text {
+  font-size: 14px;
+
   @include breakpointFrom(tablet) {
-    // text-align: left;
+    font-size: 20px;
   }
 }
 
-//
+.faq__wrapper {
+  padding: 40px 0;
 
-.faq__wrapper{
-  padding: 60px 0;
+  @include breakpointFrom(tablet) {
+    padding: 60px 0;
+  }
+
+  @include breakpointFrom(desktop) {
+  }
 }
 
 details {
-  width: 70%;
+  width: 100%;
 
   padding: 0 10px;
   margin: 0 auto;
@@ -67,6 +70,16 @@ details {
   overflow: hidden;
 
   transition: all 3s ease-in;
+
+  @include breakpointFrom(tablet) {
+    width: 100%;
+
+  }
+
+  @include breakpointFrom(desktop) {
+    width: 75%;
+
+  }
 }
 
 // details:not([open]) {

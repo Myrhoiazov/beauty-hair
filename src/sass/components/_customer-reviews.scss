@@ -1,6 +1,6 @@
 .customer-reviews {
   padding-top: 80px;
-  padding-bottom: 375px;
+  padding-bottom: 80px;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
@@ -10,9 +10,9 @@
     padding-bottom: 106px;
   }
 
-  @include breakpointFrom(desktop) {
-    padding-bottom: 123px;
-  }
+  // @include breakpointFrom(desktop) {
+  //   padding-bottom: 123px;
+  // }
 
   &__container {
     @include breakpointFrom(tablet) {
