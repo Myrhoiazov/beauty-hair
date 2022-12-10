@@ -224,20 +224,17 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin-left: 20px;
 
-  // overflow: hidden;
+  overflow: hidden;
 
   @include breakpointFrom(tablet) {
-    overflow: hidden;
-
     margin-left: 3px;
   }
 }
 
 .wrapper {
   display: flex;
-  width: 45em;
+  width: 17em;
 
   margin-bottom: 20px;
 
@@ -274,7 +271,6 @@
   @include breakpointFrom(desktop) {
     width: 200px;
     height: 265px;
-
   }
 
   & > img {
