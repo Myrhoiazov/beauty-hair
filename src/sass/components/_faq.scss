@@ -59,7 +59,7 @@
 
 details.card {
   width: 100%;
-  min-height: 55px;
+  min-height: 50px;
   height: 55px;
 
   padding: 0 10px;
@@ -88,7 +88,10 @@ details.card {
 
 summary {
   padding: 1rem;
+
+  font-size: 10px;
   display: block;
+
   background-color: $brand-color;
   color: #ffffff;
   padding-left: 2.2rem;
@@ -96,6 +99,10 @@ summary {
   cursor: pointer;
 
   animation: sweep 0.5s ease-in-out;
+
+  @include breakpointFrom(tablet) {
+    font-size: 18px;
+  }
 }
 
 summary:before {

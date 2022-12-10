@@ -157,12 +157,27 @@
 
   border-radius: 20px;
   box-shadow: $img-shadow-accent;
+
+  margin-bottom: 20px;
+
+  @include breakpointFrom(tablet) {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  @include breakpointFrom(desktop) {
+    margin: 0;
+  }
 }
 
 .google-map {
   display: block;
-  width: 700px;
+  max-width: 700px;
   height: 250px;
+}
+
+.footer-social {
+  margin-bottom: 20px;
 }
 
 .footer-social .address-social__item {
