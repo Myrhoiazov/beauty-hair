@@ -52,98 +52,64 @@
   @include breakpointFrom(tablet) {
     padding: 60px 0;
   }
-
-  @include breakpointFrom(desktop) {
-  }
 }
 
-details.card {
-  width: 100%;
-  min-height: 50px;
-  height: 55px;
-
-  padding: 0 10px;
-  margin: 0 auto;
-  background-color: $brand-color;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
-  box-shadow: 0 0.1rem 1rem -0.5rem rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-  overflow: hidden;
-
-  transition: all 0.5s ease-in;
-
-  &[open].card {
-    min-height: 250px;
-  }
-
-  @include breakpointFrom(tablet) {
-    width: 100%;
-  }
-
-  @include breakpointFrom(desktop) {
-    width: 75%;
-  }
+details[open] summary ~ * {
+  animation: open 0.4s ease-in-out;
 }
 
-summary {
-  padding: 1rem;
-
-  font-size: 10px;
-  display: block;
-
-  background-color: $brand-color;
-  color: #ffffff;
-  padding-left: 2.2rem;
-  position: relative;
-  cursor: pointer;
-
-  animation: sweep 0.5s ease-in-out;
-
-  @include breakpointFrom(tablet) {
-    font-size: 18px;
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
-
-summary:before {
-  content: '';
-  border-width: 0.4rem;
-  border-style: solid;
-  border-color: transparent transparent transparent #fff;
-  position: absolute;
-  top: 1.3rem;
-  left: 1rem;
-  transform: rotate(0);
-  transform-origin: 0.2rem 50%;
-  transition: 0.25s transform ease;
-}
-
-// /* THE MAGIC 🧙‍♀️ */
-details[open] > summary:before {
-  transform: rotate(90deg);
-}
-
-// details[open] summary ~ * {
-//   animation: sweep 0.5s ease-in-out;
-// }
-
-// @keyframes sweep {
-//   0% {
-//     opacity: 0;
-//     margin-left: -10px;
-//   }
-//   100% {
-//     opacity: 1;
-//     margin-left: 0px;
-//   }
-// }
 
 details summary::-webkit-details-marker {
   display: none;
 }
 
-details > ul {
-  padding: 1rem;
-  // padding-bottom: 1rem;
-  margin-bottom: 0;
+details summary {
+  width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
+  list-style: none;
+
+  background-color: $brand-color;
+  color: #ffffff;
+
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0.1rem 1rem -0.5rem rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+
+  animation: open 1s ease-in-out;
+}
+
+details summary:after {
+  content: '+';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 1.75rem;
+  line-height: 0;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+details[open] summary:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+
+details p {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  padding: 0.5rem 1rem;
+  animation: open 1s ease-in-out;
 }

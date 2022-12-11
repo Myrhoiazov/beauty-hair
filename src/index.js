@@ -124,26 +124,11 @@ const section = document.querySelectorAll('.js-hidden');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      console.log('entry.isIntersecting: ', entry.isIntersecting);
       entry.target.classList.add('show');
     } else {
-      console.log('entry.isIntersecting: ', entry.isIntersecting);
       entry.target.classList.remove('show');
     }
   });
 });
 
 section.forEach(elem => observer.observe(elem));
-
-// window.onscroll = function () {
-//   if (window.scrollY > 400) {
-//     nav.classList.add('fixed');
-//     nav.classList.add('animate__animated');
-//     nav.classList.add('animate__fadeInDown');
-//   } else {
-//     nav.classList.remove('fixed');
-//     nav.classList.remove('animate__animated');
-//     nav.classList.remove('animate__fadeInDown');
-
-//   }
-// };
