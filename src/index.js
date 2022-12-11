@@ -66,7 +66,6 @@
   }
 
   // Menu fixed + Go to top
-
   const nav = document.querySelector('.nav-wrapper');
 
   window.onscroll = function () {
@@ -97,7 +96,6 @@ $('.reviews__slider').slick({
 });
 
 // Masters slider
-
 const buttonsWrapper = document.querySelector('.map');
 const slides = document.querySelector('.inner');
 
@@ -119,9 +117,23 @@ buttonsWrapper.addEventListener('click', e => {
   }
 });
 
-// Slick Menu
+// Section animation
 
-// const nav = document.querySelector('.nav-wrapper');
+const section = document.querySelectorAll('.js-hidden');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log('entry.isIntersecting: ', entry.isIntersecting);
+      entry.target.classList.add('show');
+    } else {
+      console.log('entry.isIntersecting: ', entry.isIntersecting);
+      entry.target.classList.remove('show');
+    }
+  });
+});
+
+section.forEach(elem => observer.observe(elem));
 
 // window.onscroll = function () {
 //   if (window.scrollY > 400) {

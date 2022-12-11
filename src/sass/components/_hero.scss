@@ -1,3 +1,7 @@
+// .animate__animated.animate__fadeInLeft {
+//   --animate-duration: 5s;
+// }
+
 .hero {
   // background-color: $brand-color;
   position: relative;
@@ -108,7 +112,6 @@
   text-transform: uppercase;
 
   color: $white;
-  
 
   @media screen and (max-width: 1279px) {
     font-size: 32px;
