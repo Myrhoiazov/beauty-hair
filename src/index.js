@@ -132,3 +132,25 @@ const observer = new IntersectionObserver(entries => {
 });
 
 section.forEach(elem => observer.observe(elem));
+
+// Active Nav link
+
+let href = document.location.href;
+const navLinks = document.querySelectorAll('.nav__link');
+
+navLinks.forEach(elem => {
+  elem.href === href ? elem.classList.add('nav__link--active') : null;
+
+  elem.addEventListener('click', e => {
+
+    navLinks.forEach(elem => {
+      if (elem.classList.contains('nav__link--active')) {
+        elem.classList.remove('nav__link--active');
+      }
+    });
+
+    e.target.classList.add('nav__link--active');
+
+  });
+});
+

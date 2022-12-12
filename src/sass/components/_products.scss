@@ -1,6 +1,6 @@
 .products {
   padding-top: 80px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 
   @include breakpointFrom(tablet) {
     background-image: url('../images/beauty-png/lines.png');
