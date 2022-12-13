@@ -99,6 +99,8 @@ $('.reviews__slider').slick({
   },
 });
 
+
+// --------------
 // Masters slider
 const buttonsWrapper = document.querySelector('.map');
 const slides = document.querySelector('.inner');
@@ -121,8 +123,9 @@ buttonsWrapper.addEventListener('click', e => {
   }
 });
 
-// Section animation
 
+// -----------------
+// Section animation
 const section = document.querySelectorAll('.js-hidden');
 
 const observer = new IntersectionObserver(entries => {
@@ -137,13 +140,15 @@ const observer = new IntersectionObserver(entries => {
 
 section.forEach(elem => observer.observe(elem));
 
+
+// -----------------------------
 // Add Active class to Nav link
 
-let href = document.location.href;
 const navLinks = document.querySelectorAll('.nav__link');
 const navContainer = document.querySelector('.nav__items');
 
 const activeClass = 'nav__link--active';
+let href = document.location.href;
 
 navLinks.forEach(elem => {
   elem.href === href ? elem.classList.add(activeClass) : null;

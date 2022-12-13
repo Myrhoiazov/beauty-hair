@@ -113,6 +113,14 @@
 }
 
 .footer-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpointFrom(tablet) {
+    display: block;
+  }
+
   .footer__contact {
     display: flex;
     flex-direction: column;
@@ -150,6 +158,10 @@
 
 .contact__item {
   margin-bottom: 10px;
+
+  & .footer__map-link {
+    text-align: left;
+  }
 }
 
 .contact__map-wrap {
@@ -177,8 +189,10 @@
 }
 
 .footer-social {
+  margin: 0;
   margin-bottom: 20px;
 }
+
 
 .footer-social .address-social__item {
   font-size: 14px;
