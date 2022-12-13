@@ -67,6 +67,7 @@
 
   // Menu fixed + Go to top
   const nav = document.querySelector('.nav-wrapper');
+  const hero = document.querySelector('.hero');
 
   window.onscroll = function () {
     if (
@@ -74,11 +75,14 @@
       document.documentElement.scrollTop > 50
     ) {
       refs.btnGotoTop.classList.remove('goto-top--hide');
+      hero.style.marginTop = `${nav.clientHeight}px`;
+
       nav.classList.add('fixed');
       nav.classList.add('animate__animated');
       nav.classList.add('animate__fadeIn');
     } else {
       refs.btnGotoTop.classList.add('goto-top--hide');
+      hero.style.marginTop = 0;
       nav.classList.remove('fixed');
       nav.classList.remove('animate__animated');
       nav.classList.remove('animate__fadeIn');
@@ -133,24 +137,33 @@ const observer = new IntersectionObserver(entries => {
 
 section.forEach(elem => observer.observe(elem));
 
-// Active Nav link
+// Add Active class to Nav link
 
 let href = document.location.href;
 const navLinks = document.querySelectorAll('.nav__link');
+const navContainer = document.querySelector('.nav__items');
+
+const activeClass = 'nav__link--active';
 
 navLinks.forEach(elem => {
-  elem.href === href ? elem.classList.add('nav__link--active') : null;
-
-  elem.addEventListener('click', e => {
-
-    navLinks.forEach(elem => {
-      if (elem.classList.contains('nav__link--active')) {
-        elem.classList.remove('nav__link--active');
-      }
-    });
-
-    e.target.classList.add('nav__link--active');
-
-  });
+  elem.href === href ? elem.classList.add(activeClass) : null;
 });
 
+navContainer.addEventListener('click', handleClickNavLink);
+
+function handleClickNavLink(e) {
+  if (e.target.nodeName !== 'A') {
+    return;
+  }
+
+  const link = e.target;
+  const activeClass = 'nav__link--active';
+  const isActiveLink = navContainer.querySelector('.nav__link--active');
+
+  if (isActiveLink) {
+    isActiveLink.classList.remove(activeClass);
+    link.classList.add(activeClass);
+  }
+
+  link.classList.add(activeClass);
+}
