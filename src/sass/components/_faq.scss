@@ -1,3 +1,7 @@
+.faq {
+  padding: 40px 0;
+}
+
 .faq__items {
   padding: 40px 0;
 
@@ -53,7 +57,6 @@
     padding: 60px 0;
   }
 }
-
 
 details[open] summary ~ * {
   animation: open 0.4s ease-in-out;

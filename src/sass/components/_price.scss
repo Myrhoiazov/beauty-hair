@@ -1,7 +1,7 @@
-.contacts__text-style {
+.price__text-style {
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.86;
+  line-height: 1.2;
   letter-spacing: 0.04em;
 
   @include breakpointFrom(tablet) {
@@ -13,41 +13,50 @@
   }
 }
 
-.contacts .button {
-  height: 44px;
+.price-card__title {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.3;
+  color: $white;
+
+  @include breakpointFrom(tablet) {
+    font-size: 48px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 58px;
+    margin-bottom: 60px;
+  }
 }
 
-.contacts {
-  background-color: $bg-light;
-  &__container {
-    position: relative;
-  }
+.price {
+  background-color: $brand-accent;
+  padding: 60px 0;
+
   &__group {
-    // position: absolute;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
   }
+
   &-card {
     width: calc((100% - 32px * 2) / 3);
     padding: 40px 32px;
     background: $white;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    box-shadow: $img-shadow-accent;
     border-radius: 24px;
+
     &__class {
-      display: inline-block;
-      padding: 0 25px;
+      display: inline-flex;
+      align-items: center;
+      min-height: 60px;
+      padding: 20px 25px;
       // margin-bottom: 20px;
       background-color: $bg-cafe;
       color: $white;
-      text-align: center;
       border-radius: 4px;
     }
-    .contacts-card:nth-child(2n) &__class {
+
+    .price-card:nth-child(2n) &__class {
       background-color: $bg-green;
     }
     &__city {
@@ -63,37 +72,10 @@
       text-transform: uppercase;
     }
   }
-  // &-card--first {
-  //   animation: changeContactsCard 20000ms infinite 2000ms;
-  // }
-  // &-card--second {
-  //   animation: changeContactsCard 20000ms infinite 8000ms;
-  // }
-  // &-card--third {
-  //   animation: changeContactsCard 20000ms infinite 14000ms;
-  // }
 }
 
-// @keyframes changeContactsCard {
-//   0% {
-//     transform: scale(1);
-//   }
-//   10% {
-//     transform: scale(1.1);
-//   }
-//   20% {
-//     transform: scale(1.1);
-//   }
-//   30% {
-//     transform: scale(1);
-//   }
-//   100% {
-//     transform: scale(1);
-//   }
-// }
-
 @include breakpointTo(tablet) {
-  .contacts {
+  .price {
     &__container {
       padding-top: 111px;
       padding-bottom: 48px;
@@ -106,7 +88,7 @@
 }
 
 @include breakpointFrom(tablet) {
-  .contacts {
+  .price {
     &__container {
       padding: 72px 18px 40px 18px;
     }
@@ -117,14 +99,18 @@
     }
     &-card {
       &__class {
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: 700;
         padding: 0 16px;
         margin-bottom: 32px;
         border-radius: 6px;
+        text-transform: uppercase;
       }
+
       &__city {
         margin-bottom: 12px;
       }
+
       &__description {
         line-height: 1.6;
         margin-bottom: 5px;
@@ -134,7 +120,7 @@
 }
 
 @include breakpointFrom(desktop) {
-  .contacts {
+  .price {
     &__container {
       padding-top: 80px;
       padding-bottom: 80px;
@@ -144,6 +130,10 @@
       margin-bottom: 60px;
     }
     &-card {
+      &__class {
+        font-size: 20px;
+        padding: 10px 16px;
+      }
       &__city {
         margin-bottom: 8px;
       }
@@ -248,27 +238,7 @@
   }
 }
 
-.contacts__data-container {
+.price__data-container {
   display: flex;
   justify-content: space-between;
-}
-
-.contacts-card__title {
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $brand-color;
-
-  @include breakpointFrom(tablet) {
-    font-size: 48px;
-  }
-
-  @include breakpointFrom(desktop) {
-    font-size: 58px;
-    margin-bottom: 60px;
-  }
 }
