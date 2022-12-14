@@ -12,10 +12,6 @@
     padding-bottom: 106px;
   }
 
-  // @include breakpointFrom(desktop) {
-  //   padding-bottom: 123px;
-  // }
-
   &__container {
     @include breakpointFrom(tablet) {
       padding-left: 74px;
@@ -30,11 +26,13 @@
 
   &__photo {
     display: inline-block;
+    height: 100%;
     margin-bottom: 32px;
   }
 
   &__quote-wrapper {
-    // padding: 50px;
+    width: 70%;
+
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 43px;
@@ -43,6 +41,8 @@
     z-index: 1;
     background-color: $quote-bg-color;
     margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
 
     @include breakpointFrom(tablet) {
       padding-left: 6px;
@@ -54,20 +54,19 @@
     @include breakpointFrom(desktop) {
       padding-left: 105px;
       padding-right: 105px;
-      padding-top: 37px;
-      padding-bottom: 36px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__subtext {
+    @include breakpointFrom(tablet) {
+      font-size: 16px;
     }
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: $hover-bg-accent-color;
-      box-shadow: 10px 0px 0px $hover-bg-accent-color,
-        -10px 0px 0px $hover-bg-accent-color;
+    @include breakpointFrom(desktop) {
+      font-size: 21px;
+
     }
   }
 
@@ -167,11 +166,12 @@
   cursor: pointer;
   background-color: transparent;
   transition: makeTransition(background-color);
+
+  &:hover .sl-inner {
+    background-color: $brand-color;
+  }
 }
 
-.sl-link:hover {
-  background-color: $hover-bg-color;
-}
 
 .sl-inner {
   width: 12px;

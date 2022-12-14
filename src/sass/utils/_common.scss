@@ -103,7 +103,14 @@ ol {
   font-size: 18px;
   line-height: 1.17;
   text-align: center;
-  text-transform: uppercase;
+  color: $brand-accent;
+}
+
+.subtext{
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
   color: $brand-accent;
 }
 
