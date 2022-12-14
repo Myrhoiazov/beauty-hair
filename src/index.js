@@ -10,6 +10,7 @@
   };
 
   if (refs.menuBtn) refs.menuBtn.addEventListener('click', toggleMenu);
+  
   if (refs.backdrop && refs.arrBtnClose && refs.arrModalOpeners) {
     refs.arrModalOpeners.forEach(btn => {
       btn.addEventListener('click', () => {

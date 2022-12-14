@@ -98,29 +98,51 @@
     height: 100vh;
 
     padding: 20px;
-    background-color: $bg-color-black;
+    background: rgb(34, 83, 78);
+    background: linear-gradient(
+      to top,
+      rgba(34, 83, 78, 1) 0%,
+      rgba(67, 126, 121, 1) 100%
+    );
 
     transform: translateX(100%);
     transition: transform 0.4s ease-in;
 
+    & .contact__items {
+      display: flex;
+      margin: 40px;
+    }
+
     &.is-open {
       transform: translateX(0);
     }
+
+
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     position: fixed;
-    z-index: 3;
+    z-index: 9;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
 
     padding: 20px;
-    background-color: $bg-color-black;
+    background: rgb(34, 83, 78);
+    background: linear-gradient(
+      to top,
+      rgba(34, 83, 78, 1) 0%,
+      rgba(67, 126, 121, 1) 100%
+    );
 
     transform: translateX(100%);
     transition: makeTransition(transform);
+
+    & .contact__items {
+      display: flex;
+      margin: 40px;
+    }
 
     &.is-open {
       transform: translateX(50%);
@@ -128,6 +150,12 @@
         position: absolute;
         right: 35px;
       }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & .contact__items {
+      display: none;
     }
   }
 }
@@ -152,15 +180,11 @@
 
   @media screen and (max-width: 1279px) {
     padding: 12px 20px;
-    // border-top: 1px solid $white;
-    // border-bottom: 1px solid $white;
-    margin-right: 0;
   }
 }
 
 .nav__link {
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
@@ -183,7 +207,7 @@
     color: $white;
 
     &--active {
-      color: $brand-color;
+      color: $bg-color-black;
     }
   }
 }
@@ -202,12 +226,9 @@
     display: flex;
     align-items: center;
 
-    &:hover .contact__icon {
-      fill: $bg-color-black;
-    }
-
+    &:hover .contact__icon,
     &:hover .contact__link {
-      color: $bg-color-black;
+      fill: $bg-color-black;
     }
 
     &:not(:first-child) {
@@ -216,6 +237,12 @@
 
     .contact__icon {
       fill: $brand-color;
+    }
+
+    @media screen and (max-width: 1280px) {
+      .contact__icon {
+        fill: white;
+      }
     }
   }
 
@@ -232,6 +259,18 @@
     color: $brand-color;
 
     transition: $transition-style;
+
+    &:hover {
+      color: $bg-color-black;
+    }
+
+    @media screen and (max-width: 1279px) {
+      color: white;
+
+      &:hover {
+        color: $bg-color-black;
+      }
+    }
   }
 
   .contact__icon {
@@ -268,7 +307,6 @@
   }
 
   @media screen and (min-width: 768px) {
-
     margin-left: auto;
     margin-right: 32px;
   }
