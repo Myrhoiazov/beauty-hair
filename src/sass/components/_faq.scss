@@ -1,13 +1,11 @@
 .faq {
   padding: 40px 0;
 
-  @include breakpointFrom(tablet) {
-    background-image: url('../images/beauty-png/lines.png');
-    // linear-gradient(to bottom, rgba(34, 83, 78, 0.2), rgba(34, 83, 78, 0.2));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 130%;
-  }
+  background-image: url('../images/beauty-png/lines.png');
+  // linear-gradient(to bottom, rgba(34, 83, 78, 0.2), rgba(34, 83, 78, 0.2));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 130%;
 }
 
 .faq__items {
