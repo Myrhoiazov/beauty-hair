@@ -3,13 +3,8 @@
   padding-bottom: 40px;
 
   @include breakpointFrom(tablet) {
-    padding-top: 20px;
+    padding-top: 80px;
     padding-bottom: 80px;
-  }
-
-  @include breakpointFrom(desktop) {
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 
   background-repeat: no-repeat;
@@ -63,6 +58,7 @@
 
 .about__title {
   color: $brand-color;
+  text-align: center;
 
   @include breakpointFrom(tablet) {
     font-size: 32px;

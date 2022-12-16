@@ -1,8 +1,11 @@
 .products {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @include breakpointFrom(tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background-image: url('../images/beauty-png/lines.png');
     // linear-gradient(to bottom, rgba(34, 83, 78, 0.2), rgba(34, 83, 78, 0.2));
     background-position: center;
