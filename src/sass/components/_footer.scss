@@ -19,6 +19,12 @@
   }
 }
 
+.footer__title {
+  font-style: normal;
+  color: white;
+  margin-bottom: 30px;
+}
+
 @include breakpointTo(tablet) {
   .footer__container {
     display: flex;
@@ -48,6 +54,10 @@
     display: block;
     padding: 20px;
   }
+
+  .footer__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @include breakpointFrom(tablet) {
@@ -75,6 +85,10 @@
       width: 40px;
       height: 40px;
     }
+  }
+
+  .footer__title {
+    text-align: left;
   }
 
   .socials {
@@ -122,6 +136,10 @@
 
   @include breakpointFrom(tablet) {
     display: block;
+
+    .footer__title {
+      text-align: left;
+    }
   }
 
   .footer__contact {
@@ -142,16 +160,6 @@
       font-size: 14px;
     }
   }
-}
-
-.footer__title {
-  text-align: left;
-  margin-bottom: 30px;
-}
-
-.footer__title {
-  color: white;
-  font-style: normal;
 }
 
 .footer__contact {
@@ -189,12 +197,10 @@
 
   @include breakpointFrom(desktop) {
     margin: 0;
-    
+
     .google-map {
       width: 600px;
-
     }
-
   }
 }
 
@@ -230,7 +236,6 @@
 .contact__sheddule {
   display: flex;
   flex-direction: column;
-  // align-items: center;
 
   .contact__sheddule-links {
     letter-spacing: 0.05rem;
@@ -240,6 +245,12 @@
 
   .sheddule-time {
     font-size: 12px;
+  }
+
+  .contact__link {
+    font-size: 14px;
+    font-style: normal;
+    color: white;
   }
 }
 
