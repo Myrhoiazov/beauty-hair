@@ -10,7 +10,7 @@
   };
 
   if (refs.menuBtn) refs.menuBtn.addEventListener('click', toggleMenu);
-  
+
   if (refs.backdrop && refs.arrBtnClose && refs.arrModalOpeners) {
     refs.arrModalOpeners.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -100,7 +100,6 @@ $('.reviews__slider').slick({
   },
 });
 
-
 // --------------
 // Masters slider
 const buttonsWrapper = document.querySelector('.map');
@@ -124,23 +123,26 @@ buttonsWrapper.addEventListener('click', e => {
   }
 });
 
-
 // -----------------
 // Section animation
 const section = document.querySelectorAll('.js-hidden');
+const links = document.querySelectorAll('.nav__link');
 
-const observer = new IntersectionObserver(entries => {
+const options = {
+  threshold: 0.2,
+};
+
+const observer = new IntersectionObserver(addActiveClass);
+
+function addActiveClass(entries) {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting && !entry.target.classList.contains('show')) {
       entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
     }
   });
-});
+}
 
 section.forEach(elem => observer.observe(elem));
-
 
 // -----------------------------
 // Add Active class to Nav link
