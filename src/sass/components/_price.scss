@@ -1,11 +1,13 @@
 .price__text-style {
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px;
   line-height: 1.2;
   letter-spacing: 0.04em;
 
   @include breakpointFrom(tablet) {
-    font-size: 14px;
+    font-size: 22px;
   }
 
   @include breakpointFrom(desktop) {
@@ -44,22 +46,16 @@
     box-shadow: $img-shadow-accent;
     border-radius: 24px;
     overflow: hidden;
-    // box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    overflow-x: hidden;
 
     &__class {
       display: inline-flex;
       align-items: center;
       min-height: 60px;
-      // padding: 20px 25px;
-      // margin-bottom: 20px;
-      // background-color: $bg-cafe;
       color: $white;
       border-radius: 4px;
     }
 
-    // .price-card:nth-child(2n) &__class {
-    //   background-color: $bg-green;
-    // }
     &__city {
       color: $text-color;
       margin-bottom: 8px;
@@ -248,35 +244,15 @@
   justify-content: space-between;
 }
 
-
-
 .listing-item {
   display: block;
   width: 100%;
-  // margin-bottom: 20px;
-  // float: left;
   background: #fff;
-  // border-radius: 10px;
-  z-index: 0;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  // -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
-  // -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
-  // box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  // -webkit-transition: all 0.3s ease;
+  // -moz-transition: all 0.3s ease;
+  // transition: all 0.3s ease;
 }
-
-// .listing-item:hover,
-// .listing-item.active {
-//   -webkit-transform: scale(1.03);
-//   -moz-transform: scale(1.03);
-//   transform: scale(1.03);
-//   -webkit-transition: all 0.3s;
-//   -moz-transition: all 0.3s;
-//   transition: all 0.3s;
-//   z-index: 2;
-// }
 
 .listing-item .listing {
   padding: 20px;

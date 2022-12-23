@@ -11,6 +11,9 @@ body {
   color: $text-color;
   background-color: $white;
 
+  height: 100%;
+  overflow: hidden;
+
   &::after {
     content: '';
     // transform: translateX(100%);
