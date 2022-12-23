@@ -271,12 +271,6 @@
   border-right: 20px solid transparent;
 }
 
-.image__thumb {
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-
-  overflow: hidden;
-}
 
 figure.image img {
   width: 100%;
@@ -304,8 +298,10 @@ figure.image figcaption {
   text-align: center;
   bottom: 4px;
   background-color: rgba(0, 0, 0, 0.6);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  overflow: hidden;
 
   transition: background-color 0.2s ease-in;
 }
