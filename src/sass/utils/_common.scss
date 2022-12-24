@@ -13,7 +13,6 @@ body {
 
   &::after {
     content: '';
-    // transform: translateX(100%);
     opacity: 0;
     transition: all 0.2s linear;
   }
